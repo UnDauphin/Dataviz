@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -970,11 +970,10 @@ El mapa de calor muestra que cuando faltan, tienden a agruparse en ciertos regis
 
 <span class="c1"># --- Imputación para variables categóricas ---</span>
 
-<span class="c1"># Hot deck para 10-20 %</span>
-<span class="c1">#df_imputed[&quot;segmento&quot;] = df[&quot;segmento&quot;].fillna(df[&quot;segmento&quot;].dropna().sample(frac=1, replace=True).reset_index(drop=True))</span>
+<span class="c1"># Hot deck </span>
 <span class="n">df_imputed</span><span class="p">[</span><span class="s2">&quot;nivel_educativo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;nivel_educativo&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;nivel_educativo&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 
-<span class="c1"># Moda para &lt;10%</span>
+<span class="c1"># Moda para &lt;10 %</span>
 <span class="n">df_imputed</span><span class="p">[</span><span class="s2">&quot;ciudad&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df_imputed</span><span class="p">[</span><span class="s2">&quot;ciudad&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">df_imputed</span><span class="p">[</span><span class="s2">&quot;sexo&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df_imputed</span><span class="p">[</span><span class="s2">&quot;sexo&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -1121,7 +1120,7 @@ El mapa de calor muestra que cuando faltan, tienden a agruparse en ciertos regis
 <img alt="_images/8bc2a4ef286a56e8ceaaca822663c7874c0550d583fbb26c4e45ebf3e896cdfc.png" src="_images/8bc2a4ef286a56e8ceaaca822663c7874c0550d583fbb26c4e45ebf3e896cdfc.png" />
 <img alt="_images/a11acc608c759dd0be3bc31ac0af1e63af2f0e400367218d6edc0f3a243cd61a.png" src="_images/a11acc608c759dd0be3bc31ac0af1e63af2f0e400367218d6edc0f3a243cd61a.png" />
 <img alt="_images/25f36f4688edd075e126e1d16a20dbb86aa8de2d92afb4423cd620ae713ad3dc.png" src="_images/25f36f4688edd075e126e1d16a20dbb86aa8de2d92afb4423cd620ae713ad3dc.png" />
-<img alt="_images/7e193c8c7874d077d02e5787b6456badcdc7737933307b3e61e37619e57aad98.png" src="_images/7e193c8c7874d077d02e5787b6456badcdc7737933307b3e61e37619e57aad98.png" />
+<img alt="_images/ee0201f17b530482bef543ff3340808124b51d10f976aa3879b45a813fcc5f98.png" src="_images/ee0201f17b530482bef543ff3340808124b51d10f976aa3879b45a813fcc5f98.png" />
 <img alt="_images/acb012c3fee59ceffa0d856fdd25330f4f6cd11ae63dc8dd05d1598d1b85b210.png" src="_images/acb012c3fee59ceffa0d856fdd25330f4f6cd11ae63dc8dd05d1598d1b85b210.png" />
 </div>
 </div>
@@ -1322,8 +1321,8 @@ El mapa de calor muestra que cuando faltan, tienden a agruparse en ciertos regis
     <tr>
       <th>2</th>
       <td>nivel_educativo</td>
-      <td>0.157921</td>
-      <td>0.984078</td>
+      <td>0.042074</td>
+      <td>0.997733</td>
       <td>Preserva</td>
     </tr>
     <tr>
